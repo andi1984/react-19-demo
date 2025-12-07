@@ -6,6 +6,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: process.env.BASE_URL || '/',
   plugins: [react()],
+  build: {
+    manifest: true,
+    ssrManifest: true,
+  },
   test: {
     globals: true,
     environment: 'jsdom',
