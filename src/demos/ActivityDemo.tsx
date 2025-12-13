@@ -1,6 +1,22 @@
+/**
+ * UNIVERSAL COMPONENT (Runs on BOTH server and client)
+ *
+ * Server execution (entry-server.tsx):
+ * - useState/useEffect initialize with default values
+ * - useEffect cleanup/effects are NOT executed on server
+ * - Returns HTML with initial state
+ *
+ * Client execution (main.tsx):
+ * - Hydrates the server-rendered content
+ * - useEffect runs after hydration
+ * - Interactive state management and timers work
+ */
+
 import { useState, useEffect, Activity } from "react";
 
-// A component with internal state that we want to preserve
+// Component with state and effects
+// - Server: Only initial state, no effects run
+// - Client: Full lifecycle with effects and timers
 function VideoPlayer({ id }: { id: string }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);

@@ -475,6 +475,235 @@
   }
 }
 
+/* Server Components demo styles */
+.rsc-demo-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.feature-list {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+  color: #5e687e;
+  line-height: 1.7;
+}
+
+.feature-list li {
+  margin-bottom: 0.35rem;
+}
+
+.note {
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  line-height: 1.5;
+}
+
+.server-component-box,
+.client-component-box,
+.server-action-box,
+.composition-box {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid;
+}
+
+.server-component-box {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-color: #0ea5e9;
+}
+
+.client-component-box {
+  background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+  border-color: #eab308;
+}
+
+.server-action-box {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border-color: #a855f7;
+}
+
+.composition-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-color: #22c55e;
+}
+
+.server-component-box h3,
+.client-component-box h4,
+.server-action-box h3,
+.composition-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #23272f;
+}
+
+.info-text {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.875rem;
+  color: #5e687e;
+  line-height: 1.6;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e0f2fe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.product-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #23272f;
+}
+
+.product-card .price {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+.product-card .server-secret {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background: #fffbeb;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #92400e;
+  border-left: 3px solid #fcd34d;
+  line-height: 1.4;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.counter-controls button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #eab308;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.counter-controls button:hover {
+  background: #ca8a04;
+  transform: scale(1.05);
+}
+
+.counter-controls .count {
+  min-width: 100px;
+  text-align: center;
+  font-weight: 600;
+  color: #23272f;
+}
+
+.server-action-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.server-action-box input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  transition: all 0.2s;
+}
+
+.server-action-box input:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.server-action-box button {
+  padding: 0.75rem 1.5rem;
+  background: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.server-action-box button:hover:not(:disabled) {
+  background: #9333ea;
+  transform: translateY(-1px);
+}
+
+.server-action-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-message {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 8px;
+  color: #16a34a;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #dcfce7;
+}
+
+.composition-example {
+  margin-top: 1rem;
+}
+
+.server-wrapper {
+  background: #e0f2fe;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 2px dashed #0ea5e9;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.client-island {
+  margin-top: 1rem;
+  background: #fef3c7;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px dashed #eab308;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #78350f;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .app-header h1 {
@@ -657,5 +886,114 @@
 
   .comment-draft h4 {
     color: #f6f7f9;
+  }
+
+  .note {
+    background: linear-gradient(135deg, #422006 0%, #451a03 100%);
+    border-color: #854d0e;
+    color: #fcd34d;
+  }
+
+  .feature-list {
+    color: #99a1b3;
+  }
+
+  .server-component-box {
+    background: linear-gradient(135deg, #082f49 0%, #0c4a6e 100%);
+    border-color: #0ea5e9;
+  }
+
+  .client-component-box {
+    background: linear-gradient(135deg, #422006 0%, #451a03 100%);
+    border-color: #eab308;
+  }
+
+  .server-action-box {
+    background: linear-gradient(135deg, #3b0764 0%, #581c87 100%);
+    border-color: #a855f7;
+  }
+
+  .composition-box {
+    background: linear-gradient(135deg, #052e16 0%, #14532d 100%);
+    border-color: #22c55e;
+  }
+
+  .server-component-box h3,
+  .client-component-box h4,
+  .server-action-box h3,
+  .composition-box h3 {
+    color: #f6f7f9;
+  }
+
+  .info-text {
+    color: #99a1b3;
+  }
+
+  .product-card {
+    background: #343a46;
+    border-color: #0c4a6e;
+  }
+
+  .product-card h4 {
+    color: #f6f7f9;
+  }
+
+  .product-card .price {
+    color: #38bdf8;
+  }
+
+  .product-card .server-secret {
+    background: #422006;
+    color: #fcd34d;
+    border-left-color: #854d0e;
+  }
+
+  .counter-controls .count {
+    color: #f6f7f9;
+  }
+
+  .counter-controls button {
+    background: #ca8a04;
+  }
+
+  .counter-controls button:hover {
+    background: #eab308;
+  }
+
+  .server-action-box input {
+    background: #343a46;
+    border-color: #4b5563;
+    color: #f6f7f9;
+  }
+
+  .server-action-box input:focus {
+    background: #23272f;
+    border-color: #a855f7;
+  }
+
+  .server-action-box button {
+    background: #9333ea;
+  }
+
+  .server-action-box button:hover:not(:disabled) {
+    background: #a855f7;
+  }
+
+  .result-message {
+    background: #14532d;
+    border-color: #166534;
+    color: #86efac;
+  }
+
+  .server-wrapper {
+    background: #0c4a6e;
+    border-color: #0ea5e9;
+    color: #e0f2fe;
+  }
+
+  .client-island {
+    background: #451a03;
+    border-color: #eab308;
+    color: #fef3c7;
   }
 }

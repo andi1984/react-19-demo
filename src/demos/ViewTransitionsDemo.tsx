@@ -1,3 +1,19 @@
+/**
+ * UNIVERSAL COMPONENT (Runs on BOTH server and client)
+ *
+ * Server execution (entry-server.tsx):
+ * - Renders initial state (list view or detail view)
+ * - document.startViewTransition is NOT available on server
+ * - Returns static HTML
+ *
+ * Client execution (main.tsx):
+ * - Hydrates the server-rendered content
+ * - View Transitions API works in browser
+ * - Interactive state changes trigger smooth visual transitions
+ *
+ * Note: View Transitions are a CLIENT-ONLY browser feature
+ */
+
 import { useState, useCallback } from "react";
 import { flushSync } from "react-dom";
 

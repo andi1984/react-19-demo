@@ -1,6 +1,21 @@
+/**
+ * UNIVERSAL COMPONENT (Runs on BOTH server and client)
+ *
+ * Server execution (entry-server.tsx):
+ * - Suspense boundaries catch thrown promises during SSR
+ * - renderToString waits for promises (React 19 feature)
+ * - Returns HTML with resolved data (not fallback)
+ *
+ * Client execution (main.tsx):
+ * - Hydrates the server-rendered content
+ * - Suspense boundaries become interactive
+ * - Can handle new data fetching triggered by user interaction
+ */
+
 import { Suspense, useState, use } from 'react'
 
 // Simulated API that returns a promise
+// Executes on both server (during SSR) and client (after user interaction)
 function fetchUser(id: number): Promise<{ id: number; name: string; email: string }> {
   return new Promise((resolve) => {
     setTimeout(() => {
